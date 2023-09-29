@@ -15,7 +15,7 @@ jobs:
         with:
            account: ${{ vars.account }}
            adminkey: ${{ secrets.adminkey }}
-      - run: \
+      - run: |
          echo domain ${{ steps.szl.outputs.domain }}
          echo account ${{ steps.szl.outputs.account }}
          echo apikey ${{ steps.szl.outputs.apikey }}
