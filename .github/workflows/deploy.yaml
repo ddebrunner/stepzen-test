@@ -12,5 +12,5 @@ jobs:
       - run: npm -g install stepzen
       - uses: stepzen-dev/stepzen-login@6c71fca2a46b43c22be4424b5e0bb8bc5d55ac28
         with:
-           account: ${{ variables.account }}
+           account: ${{ vars.account }}
            adminkey: ${{ secrets.adminkey }}
