@@ -1,0 +1,16 @@
+name: Deploy a schema
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - run: npm -g install stepzen
+      - uses: stepzen-dev/stepzen-login
+        with:
+           account: ${{ variables.account }}
+           adminkey: ${{ secrets.adminkey }}
