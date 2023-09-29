@@ -10,7 +10,12 @@ jobs:
         with:
           node-version: 20
       - run: npm -g install stepzen
-      - uses: stepzen-dev/stepzen-login@outputs
+      - id: szl
+        uses: stepzen-dev/stepzen-login@outputs
         with:
            account: ${{ vars.account }}
            adminkey: ${{ secrets.adminkey }}
+      - run: \
+         echo domain ${{ steps.szl.outputs.domain }}
+         echo account ${{ steps.szl.outputs.account }}
+         echo apikey ${{ steps.szl.outputs.apikey }}
