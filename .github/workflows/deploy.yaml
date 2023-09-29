@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: 20
       - run: npm -g install stepzen
-      - uses: stepzen-dev/stepzen-login@6c71fca2a46b43c22be4424b5e0bb8bc5d55ac28
+      - uses: stepzen-dev/stepzen-login@outputs
         with:
            account: ${{ vars.account }}
            adminkey: ${{ secrets.adminkey }}
