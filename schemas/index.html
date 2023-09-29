@@ -1,0 +1,8 @@
+type User @mock {
+  id:ID!
+  name: String @mockfn(name:"FirstName")
+}
+
+type Query {
+  user(id:ID!):User
+}
